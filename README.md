@@ -1,5 +1,5 @@
-# WetravlesFront
-Wetravles / Front / Vue3 JS 3.0.4
+# We travel Front
+We travel / Front / Vue3 JS 3.0.4
 
 
 # 처음 실행 시,
