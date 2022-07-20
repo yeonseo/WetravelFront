@@ -12,13 +12,50 @@
     </div>
 
     <div class="main-list">
-        <div class="main-images" v-for="index in 3">
 
+
+        <div class="header-icon">
+            <div class="circle">
+            </div>
+            <span>위치여기저기</span>
+        </div>
+        <div class="main-images">
+            <div class="image">
+                <img src="@/assets/images/image01.jpg" />
+            </div>
+            <div class="posting">
+                <span class="name">임창정형</span> 댄쓰댄쓰~ 땐쏠라잇~ 나의 손을 잡아봐~ 사랑사랑할꺼야~ 너만 좋아할꺼야~
+            </div>
         </div>
 
-        <div class="posting">
-
+        <div class="header-icon">
+            <div class="circle">
+            </div>
+            <span>위치여기저기</span>
         </div>
+        <div class="main-images">
+            <div class="image">
+                <img src="@/assets/images/image02.jpg" />
+            </div>
+            <div class="posting">
+                <span class="name">임창정형</span> 댄쓰댄쓰~ 땐쏠라잇~ 나의 손을 잡아봐~ 사랑사랑할꺼야~ 너만 좋아할꺼야~
+            </div>
+        </div>
+
+        <div class="header-icon">
+            <div class="circle">
+            </div>
+            <span>위치여기저기</span>
+        </div>
+        <div class="main-images">
+            <div class="image">
+                <img src="@/assets/images/image03.jpg" />
+            </div>
+            <div class="posting">
+                <span class="name">임창정형</span> 댄쓰댄쓰~ 땐쏠라잇~ 나의 손을 잡아봐~ 사랑사랑할꺼야~ 너만 좋아할꺼야~
+            </div>
+        </div>
+
     </div>
 </template>
 
