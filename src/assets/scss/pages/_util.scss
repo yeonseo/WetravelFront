@@ -1,0 +1,33 @@
+
+// tiptap 에디터 추가
+.editor__header {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  padding: 0.25rem;
+
+  .menu-item {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #0d0d0d;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.4rem;
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+
+    &.is-active, &:hover {
+      color: #fff;
+      background-color: #0d0d0d;
+    }
+  }
+
+  .divider {
+    width: 2px;
+    height: 1.25rem;
+    background-color: #0000001a;
+    margin-left: 0.5rem;
+    margin-right: 0.75rem;
+  }
+}

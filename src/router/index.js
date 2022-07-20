@@ -20,6 +20,12 @@ const routes = [
         path: '/markup-main',
         name: 'MarkupMain',
         component: () => import('@/views/markup/MarkupMain.vue')
+    },
+    {
+        path: '/markup-write',
+        name: 'MarkupWrite',
+        component: () => import('@/views/markup/MarkupWrite.vue')
+    },
     }
 ]
 
