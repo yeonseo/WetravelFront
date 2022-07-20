@@ -1,7 +1,5 @@
 <template>
-    <div class="main-top logo">
-        <span>logo</span>
-    </div>
+    <Header />
 
     <div class="main-top icons">
         <a class="location" v-for="index in 10" @click="thisClick()">
@@ -60,6 +58,8 @@
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
+
 export default {
     name: 'MarkupMain',
 
@@ -73,6 +73,7 @@ export default {
         }
     },
     components: {
+        Header,
     }
 }
 </script>

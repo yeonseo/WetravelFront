@@ -31,12 +31,15 @@
 
 .main-top {
   &.logo {
-    width: 100px;
+    //width: 100px;
+    margin: 0.5rem;
     height: 50px;
     position: absolute;
-    background: aquamarine;
+    //background: aquamarine;
     top: 0;
     left: 0;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
   }
 
   &.icons {
