@@ -4,6 +4,46 @@
     <div class="posting-content edit">
         <TiptapEditor :detail="detail" :option="option" @change="getTiptapContent" @changeFile="getTiptapFile" />
     </div>
+
+    <el-select v-model="group" class="form select" placeholder="Select"
+               :popper-append-to-body="false">
+        <el-option
+        v-for="item in selectOptions"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"/>
+    </el-select>
+
+    <div class="input">
+        <span class="input-label">주소</span>
+        <div class="input-field">
+            <el-input></el-input>
+            <el-button class="btn-normal">찾기</el-button>
+        </div>
+    </div>
+    <div class="input medium">
+        <span class="input-label">날짜</span>
+
+
+        <div class="input-field">
+            <el-date-picker
+                    v-model="startDate"
+                    type="date"
+                    placeholder="시작일"
+                    :size="size"
+            />
+            <el-date-picker
+                    v-model="startDate"
+                    type="date"
+                    placeholder="종료일"
+                    :size="size"
+            />
+        </div>
+
+
+    </div>
+
+    <el-button class="btn-normal mt-20">저장하기</el-button>
 </template>
 <script>
 import {reactive, toRefs} from "vue";
@@ -31,10 +71,21 @@ export default {
             newItem: {
                 fileList:[]
             },
-            image: {
-                width: 10000,
-                height: 10000
-            }
+
+            group: null,
+            selectOptions : [
+                {
+                    value: 'toGo',
+                    label: '가볼곳',
+                },
+                {
+                    value: 'gone',
+                    label: '다녀옴',
+                },
+            ],
+
+            startDate: null,
+            endDate: null
         });
 
         const thisClick = () => {

@@ -202,3 +202,73 @@
     height: 30rem;
   }
 }
+
+.el-select {
+  &.form {
+    &.select {
+      .el-select-dropdown__item {
+        background: $primary-shadow;
+        color: $primary;
+        &.selected {
+          background: $primary-shadow-deep;
+        }
+      }
+    }
+  }
+}
+
+
+
+.input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  .input-label {
+    display: block;
+    font-size: 0.8rem;
+    text-align: left;
+    margin: 2rem 0 0 1.5rem;
+  }
+
+  .input-field{
+    margin: 0.5rem 1.5rem;
+    .el-input {
+      width: 82%;
+      height: 1.5rem;
+      min-width: 50px;
+    }
+
+    .el-button {
+      width: 15%;
+      margin-left: 3%;
+      height: 1.5rem;
+      padding: 0;
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+
+    .el-date-editor {
+      width: 48.7%;
+
+      &:first-child{
+        margin-right: 2%;
+      }
+
+      .el-input__prefix{
+        top: 0.5rem
+      }
+    }
+
+  }
+
+
+
+}
+
+.btn-normal {
+  background: $primary;
+  color: $white;
+}
