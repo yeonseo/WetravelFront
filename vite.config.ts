@@ -20,8 +20,9 @@ export default defineConfig (({ mode }) => {
                     ws: true,
                 },
             },
-            host: env.VITE_HOST
+            host: env.VITE_HOST,
+            port: 3030
         },
-        plugins: [vue()],
+        plugins: [vue()]
     }
 })
