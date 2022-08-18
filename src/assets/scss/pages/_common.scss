@@ -4,7 +4,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 100vw;
+  position: relative;
 }
 
 * {
@@ -53,20 +54,17 @@
 
 .main-top {
   &.logo {
-    //width: 100px;
     margin: 0.5rem;
     height: 50px;
-    position: absolute;
-    //background: aquamarine;
     top: 0;
     left: 0;
     font-family: 'Lobster', cursive;
     font-size: 2rem;
+    text-align: left;
   }
 
   &.icons {
     position: relative;
-    width: 100%;
     height: 70px;
     overflow-x: auto;
     white-space: nowrap;
@@ -112,7 +110,7 @@
 
   .header-icon {
     position: relative;
-    width: 100%;
+    width: 100vw;
     .circle {
       width: 2.5rem;
       height: 2.5rem;
@@ -141,8 +139,8 @@
       top: 0;
       left: 0;
       transform: translate(50, 50);
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vw;
       object-fit: cover;
       margin: auto;
     }
@@ -150,14 +148,14 @@
   .main-images:after {
     content: "";
     display: block;
-    padding-bottom: 100%;
+    padding-bottom: 100vw;
   }
 
   .posting {
     margin: 0 1rem;
     font-size: 0.8rem;
     position: absolute;
-    top: 100%;
+    top: 100vw;
     height: 3rem;
     text-align: left;
 
@@ -179,8 +177,8 @@
       top: 0;
       left: 0;
       transform: translate(50, 50);
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vw;
       object-fit: cover;
       margin: auto;
     }
@@ -188,7 +186,7 @@
   .main-images:after {
     content: "";
     display: block;
-    padding-bottom: 100%;
+    padding-bottom: 100vw;
   }
 
 
@@ -201,6 +199,14 @@
     border: 1px solid gray;
     height: 30rem;
   }
+}
+
+.bottom {
+  width: 100vw;
+  height: 4rem;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
 
 .el-select {
@@ -222,7 +228,7 @@
 .input {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 100vw;
 
   .input-label {
     display: block;
@@ -263,12 +269,29 @@
     }
 
   }
-
-
-
 }
 
 .btn-normal {
   background: $primary;
   color: $white;
+}
+
+.btn-circle {
+  position: relative;
+  float: right;
+  right: 20px;
+  bottom: 20px;
+  width: 4rem;
+  height: 4rem;
+  border-radius:50%;
+  background: $primary-deep;
+  padding: 0;
+  border: 2px solid $primary-shadow-deep;
+  span {
+    line-height: 65px;
+    font-size: 55px;
+    color: $primary-light;
+    right: -10px;
+    font-weight: bolder;
+  }
 }
