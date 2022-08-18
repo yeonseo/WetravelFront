@@ -1,5 +1,5 @@
 <template>
-    <Header />
+    <Header :isBack="true" :title="'Back'"/>
 
     <div class="posting-content edit">
         <TiptapEditor :detail="detail" :option="option" @change="getTiptapContent" @changeFile="getTiptapFile" />

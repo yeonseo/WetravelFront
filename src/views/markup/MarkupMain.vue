@@ -55,6 +55,10 @@
         </div>
 
     </div>
+
+    <div class="bottom btn">
+        <div class="btn-circle" @click="$router.push({name: 'MarkupWrite'})"><span>+</span></div>
+    </div>
 </template>
 
 <script>
