@@ -26,7 +26,6 @@ const routes = [
         name: 'MarkupWrite',
         component: () => import('@/views/markup/MarkupWrite.vue')
     },
-    }
 ]
 
 export const router = createRouter({
