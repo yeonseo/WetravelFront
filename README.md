@@ -1,9 +1,32 @@
 # We travel Front
-We travel / Front / Vue3 JS 3.0.4
+
+#### Version
+> node : v16.16.0
+>
+> Vue : v3.3.2
+>
+> VITE : v4.3.9
 
 
-# 처음 실행 시,
-$ npm i 또는 npm install
 
-# 실행
-$ npm run dev
+## Setting
+### 1. initial
+
+```
+npm i / npm install
+```
+
+
+### 2. Server Start
+
+```
+npm run dev
+```
+
+
+## Smart Contract Config
+
+*.env*
+```
+
+```

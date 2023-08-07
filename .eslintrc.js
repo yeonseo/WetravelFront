@@ -1,25 +1,33 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution');
+
 module.exports = {
-    extends: ['plugin:vue/vue3-essential', 'prettier'],
+    root: true,
+    extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/eslint-config-prettier'],
+    env: {
+        'vue/setup-compiler-macros': true,
+        browser: true,
+        node: true
+    },
+    parserOptions: {
+        ecmaFeatures: '2022',
+        sourceType: 'module'
+    },
     rules: {
-        'vue/no-unused-vars': 'error',
-        // yachoi 개발 시 삭제
-        'vue/multi-word-component-names': [
+        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+        'prettier/prettier': [
             'error',
             {
-                ignores: [
-                    'List',
-                    'Index',
-                    'Info',
-                    'Detail',
-                    'Notify',
-                    'Deposit',
-                    'Withdrawal',
-                    'Splash',
-                    'View',
-                    'Calender',
-                    'Common',
-                ],
-            },
+                singleQuote: true,
+                semi: true,
+                tabWidth: 4,
+                trailingComma: 'none',
+                printWidth: 180,
+                bracketSpacing: true,
+                arrowParens: 'avoid'
+            }
         ],
-    },
+        'vue/multi-word-component-names': 0
+    }
 };
