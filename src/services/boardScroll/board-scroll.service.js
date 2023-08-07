@@ -1,5 +1,5 @@
 import SessionStorageService from '@/services/sessionStorage/session-storage.service';
-import SessionStorageKey from "@/services/sessionStorage/session-storage-key";
+import SessionStorageKey from '@/services/sessionStorage/session-storage-key';
 
 class BoardScrollService {
     async initItem(service, getNext) {
@@ -11,7 +11,6 @@ class BoardScrollService {
             // 1. 화면 최초 진입
             // 2. 스크롤, 데이터 추가 호출
             res = await this.getData(service, getNext);
-
         } else {
             // 상세 페이지를 다녀온 경우, api 호출없이
             // 저장된 게시판 데이터 불러오기
@@ -21,10 +20,10 @@ class BoardScrollService {
             this.getScrollLocation();
         }
         SessionStorageService.setItem(SessionStorageKey.IS_VIEW_DETAIL, false);
-        return res
+        return res;
     }
 
-    async getData (service, getNext) {
+    async getData(service, getNext) {
         let newData = await service;
 
         // 무한 스크롤
@@ -33,7 +32,7 @@ class BoardScrollService {
             let storedRes = JSON.parse(SessionStorageService.getItem(SessionStorageKey.BOARD_DATA));
 
             // 추가된 데이터 데이터 추가
-            newData.data = storedRes.data.concat(newData.data)
+            newData.data = storedRes.data.concat(newData.data);
         } else {
             // (임시) 데이터 초기화 지점
             await this.removeItem();
@@ -48,21 +47,21 @@ class BoardScrollService {
      * @param scrollLocation
      */
     // 상세화면으로 이동하는 경우 scroll 위치 저장
-    setScrollLocation (scrollLocation) {
+    setScrollLocation(scrollLocation) {
         SessionStorageService.setItem(SessionStorageKey.SCROLL_LOCATION, scrollLocation);
     }
 
-    getScrollLocation () {
+    getScrollLocation() {
         const scrollLocation = SessionStorageService.getItem(SessionStorageKey.SCROLL_LOCATION);
 
-        window.scrollTo({top:scrollLocation, behavior:'smooth'});
+        window.scrollTo({ top: scrollLocation, behavior: 'smooth' });
     }
 
     /** detail -> index
      * @param isViewDetail
      */
     // 목록으로 돌아가는 경우 isViewDetail : true 저장
-    setIsViewDetail (isViewDetail) {
+    setIsViewDetail(isViewDetail) {
         SessionStorageService.setItem(SessionStorageKey.IS_VIEW_DETAIL, isViewDetail);
     }
 

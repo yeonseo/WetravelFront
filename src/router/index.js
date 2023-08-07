@@ -25,10 +25,10 @@ const routes = [
         path: '/markup-write',
         name: 'MarkupWrite',
         component: () => import('@/views/markup/MarkupWrite.vue')
-    },
-]
+    }
+];
 
 export const router = createRouter({
     history: createWebHistory(),
-    routes,
+    routes
 });

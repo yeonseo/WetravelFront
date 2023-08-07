@@ -1,7 +1,7 @@
 <template>
     <div class="main-top logo" v-if="isBack">
         <i class="fa-solid fa-arrow-left mr-10" @click="$router.go(-1)"></i>
-        <span>{{title}}</span>
+        <span>{{ title }}</span>
     </div>
 
     <div class="main-top logo" v-else>
@@ -10,6 +10,6 @@
 </template>
 <script>
 export default {
-    props: ['isBack', 'title'],
-}
+    props: ['isBack', 'title']
+};
 </script>
